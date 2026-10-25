@@ -7,7 +7,7 @@
 // extension stays a few kilobytes and every update of the suite updates the connector. Nothing is installed from here.
 //
 // Where it looks: Windows' registered App Path of GUI Test Runner-Recorder (what
-// the installer writes, HKCU then HKLM - the folder gts-mcp.exe stands in), then the usual install folders. Not found: it
+// the installer writes, HKCU then HKLM - the folder gts-mcp.exe stands in), then the installer's default folder. Not found: it
 // still answers Claude as a tiny MCP server whose one tool says what to install, so the person reads why instead of
 // "server failed".
 'use strict';
@@ -37,9 +37,8 @@ function findServer() {
   const candidates = [];
   const registered = fromAppPaths();
   if (registered) candidates.push(registered);
-  for (const base of [process.env.ProgramFiles, process.env['ProgramFiles(x86)'], process.env.LOCALAPPDATA && path.join(process.env.LOCALAPPDATA, 'Programs')]) {
-    if (base) candidates.push(path.join(base, 'GUI Test Studio', 'Runner', EXE));
-  }
+  // The installer's default folder, for a computer whose App Path entry was removed (a per-user install always has one).
+  candidates.push(path.join('C:\\Program Files', 'GUI Test Studio', 'Runner', EXE));
   for (const candidate of candidates) {
     if (candidate && fs.existsSync(candidate)) return candidate;
   }
