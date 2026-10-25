@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "gui-test-studio": {
+      "command": "gts-mcp",
+      "args": []
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "gui-test-studio",
+  "owner": {
+    "name": "GUI Test Studio",
+    "email": "support@guiteststudio.com"
+  },
+  "metadata": {
+    "description": "GUI Test Studio's plugins for Claude"
+  },
+  "plugins": [
+    {
+      "name": "gui-test-studio",
+      "source": "./",
+      "description": "Create, change and run automated end-to-end tests of Windows apps and web pages from a prompt, with GUI Test Studio's visual and AI engine."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "gui-test-studio",
+  "displayName": "GUI Test Studio",
+  "version": "1.0.0",
+  "description": "Create, change and run automated end-to-end tests of Windows apps and web pages from a prompt, with GUI Test Studio's visual and AI engine.",
+  "author": {
+    "name": "GUI Test Studio",
+    "email": "support@guiteststudio.com",
+    "url": "https://www.guiteststudio.com"
+  },
+  "homepage": "https://www.guiteststudio.com/docs/claude",
+  "repository": "https://github.com/GUITestStudio/gui-test-studio-claude",
+  "license": "MIT",
+  "keywords": ["end-to-end testing", "e2e", "ui testing", "gui testing", "test automation", "regression testing", "windows", "web testing", "ci-cd"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://www.guiteststudio.com/docs/claude",
+  "supportUrl": "https://www.guiteststudio.com/support",
+  "privacyPolicyUrl": "https://www.guiteststudio.com/privacy",
+  "termsOfServiceUrl": "https://www.guiteststudio.com/terms"
+}
