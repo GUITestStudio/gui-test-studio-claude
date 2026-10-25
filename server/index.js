@@ -6,7 +6,7 @@
 // the suite's engine, its DLLs, its models and the runner): this script only finds it and hands the streams over, so the
 // extension stays a few kilobytes and every update of the suite updates the connector. Nothing is installed from here.
 //
-// Where it looks: GTS_MCP_EXE (a developer's own build), Windows' registered App Path of GUI Test Runner-Recorder (what
+// Where it looks: Windows' registered App Path of GUI Test Runner-Recorder (what
 // the installer writes, HKCU then HKLM - the folder gts-mcp.exe stands in), then the usual install folders. Not found: it
 // still answers Claude as a tiny MCP server whose one tool says what to install, so the person reads why instead of
 // "server failed".
@@ -17,7 +17,6 @@ const path = require('path');
 
 const EXE = 'gts-mcp.exe';
 const RUNNER_EXE = 'GUI Test Runner-Recorder.exe';
-const DOWNLOAD_URL = 'https://www.guiteststudio.com';
 
 function fromAppPaths() {
   if (process.platform !== 'win32') return null;
@@ -36,7 +35,6 @@ function fromAppPaths() {
 
 function findServer() {
   const candidates = [];
-  if (process.env.GTS_MCP_EXE) candidates.push(process.env.GTS_MCP_EXE);
   const registered = fromAppPaths();
   if (registered) candidates.push(registered);
   for (const base of [process.env.ProgramFiles, process.env['ProgramFiles(x86)'], process.env.LOCALAPPDATA && path.join(process.env.LOCALAPPDATA, 'Programs')]) {
@@ -52,7 +50,7 @@ function findServer() {
 function answerNotInstalled() {
   const message =
     `GUI Test Studio is not installed on this computer (${EXE} was not found next to ${RUNNER_EXE}). ` +
-    `Install GUI Test Studio from ${DOWNLOAD_URL}, sign in (the free trial or a paid plan), then ask again - nothing else to set up.`;
+    `Install GUI Test Studio (the plugin's page, GUITestStudio/gui-test-studio-claude on GitHub, links to its download), sign in (the free trial or a paid plan), then ask again - nothing else to set up.`;
   let buffer = '';
   const write = (object) => process.stdout.write(JSON.stringify(object) + '\n');
   process.stdin.setEncoding('utf8');
