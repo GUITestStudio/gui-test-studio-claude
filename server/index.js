@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GUI Test Studio SARL. Released under the MIT licence (see LICENSE).
+// Copyright (c) 2026 GUI Test Studio SARL. All rights reserved. Proprietary: see LICENSE.
 // GUI Test Studio for Claude - the plugin's launcher.
 //
 // Claude starts this file (.mcp.json: "node" and this path) and talks the Model Context Protocol over its standard

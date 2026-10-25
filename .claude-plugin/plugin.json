@@ -10,7 +10,7 @@
   },
   "homepage": "https://www.guiteststudio.com/docs/claude",
   "repository": "https://github.com/GUITestStudio/gui-test-studio-claude",
-  "license": "MIT",
+  "license": "LicenseRef-GUITestStudio-Proprietary",
   "keywords": ["end-to-end testing", "e2e", "ui testing", "gui testing", "test automation", "regression testing", "windows", "web testing", "ci-cd"],
   "icon": "./icon.png",
   "documentationUrl": "https://www.guiteststudio.com/docs/claude",

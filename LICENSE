@@ -1,27 +1,36 @@
-MIT License
+GUI Test Studio for Claude
+Copyright (c) 2026 GUI Test Studio SARL. All rights reserved.
 
-Copyright (c) 2026 GUI Test Studio SARL
+This repository and every file in it (the "Plugin") are proprietary to GUI Test
+Studio SARL and are protected by copyright and other intellectual property laws.
+Nothing in this repository is released as open source.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Permitted use. You may install the Plugin through Claude's plugin directory or
+   from this repository, and run it, solely to use GUI Test Studio with Claude,
+   under a GUI Test Studio account on its free trial or a paid plan and subject to
+   the GUI Test Studio Terms of Service: https://www.guiteststudio.com/terms
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. Restrictions. Except as allowed in section 1, you may not copy, modify, adapt,
+   translate, create derivative works of, distribute, sublicense, sell, publish or
+   otherwise make the Plugin available to anyone, in whole or in part, nor use it
+   with any product other than GUI Test Studio.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. Distribution by Anthropic. GUI Test Studio SARL permits Anthropic to fetch,
+   review, scan, host and distribute the Plugin to users through Claude's plugin
+   directory, unchanged.
 
-This licence covers the files of this repository only. GUI Test Studio, the
-software this plugin starts, is proprietary software of GUI Test Studio SARL,
-licensed under its own terms: https://www.guiteststudio.com/terms
-"GUI Test Studio", "GUI Test Runner-Recorder" and the GTS logo are trademarks
-of GUI Test Studio SARL.
+4. GUI Test Studio itself. The Plugin contains none of GUI Test Studio. GUI Test
+   Studio, GUI Test Runner-Recorder and every program the Plugin starts are
+   proprietary software of GUI Test Studio SARL, licensed only under the GUI Test
+   Studio Terms of Service and its End User License Agreement.
+
+5. Trademarks. "GUI Test Studio", "GUI Test Runner-Recorder", the GTS logo and the
+   GTS Vision + AI Engine are trademarks of GUI Test Studio SARL. No right to use
+   them is granted.
+
+6. No warranty. The Plugin is provided "as is", without warranty of any kind, to
+   the extent permitted by law. In no event shall GUI Test Studio SARL be liable
+   for any claim, damages or other liability arising from the Plugin, except as the
+   GUI Test Studio Terms of Service provide.
+
+Questions: support@guiteststudio.com

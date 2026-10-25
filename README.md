@@ -66,7 +66,8 @@ Support: [guiteststudio.com/support](https://www.guiteststudio.com/support) · s
 
 ## Licence and trademarks
 
-The files of this plugin are released under the MIT licence (see [LICENSE](LICENSE)).
+This plugin is proprietary software of GUI Test Studio SARL, not open source: you may install and use it only with
+GUI Test Studio, as its [LICENSE](LICENSE) says.
 GUI Test Studio itself is proprietary software of GUI Test Studio SARL, used under its own licence agreement
 ([terms](https://www.guiteststudio.com/terms)). "GUI Test Studio", "GUI Test Runner-Recorder", the GTS logo and the
 GTS Vision + AI Engine are trademarks of GUI Test Studio SARL. Claude is a trademark of Anthropic; this plugin is
