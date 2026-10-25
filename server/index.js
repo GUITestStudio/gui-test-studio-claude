@@ -17,6 +17,7 @@ const path = require('path');
 
 const EXE = 'gts-mcp.exe';
 const RUNNER_EXE = 'GUI Test Runner-Recorder.exe';
+const DOWNLOAD_URL = 'https://www.guiteststudio.com/download';
 
 function fromAppPaths() {
   if (process.platform !== 'win32') return null;
@@ -48,8 +49,9 @@ function findServer() {
 // The suite is not installed: a server of one tool, so the person is told what to do in Claude's own window.
 function answerNotInstalled() {
   const message =
-    `GUI Test Studio is not installed on this computer (${EXE} was not found next to ${RUNNER_EXE}). ` +
-    `Install GUI Test Studio (the plugin's page, GUITestStudio/gui-test-studio-claude on GitHub, links to its download), sign in (the free trial or a paid plan), then ask again - nothing else to set up.`;
+    `GUI Test Studio is not installed on this computer, so no test can be created or run yet. ` +
+    `Tell the person to install it first from ${DOWNLOAD_URL} (give them this link), start it and sign in ` +
+    `with a GUI Test Studio account on its free trial or a paid plan, then ask again. Nothing else needs to be set up.`;
   let buffer = '';
   const write = (object) => process.stdout.write(JSON.stringify(object) + '\n');
   process.stdin.setEncoding('utf8');
@@ -72,7 +74,7 @@ function answerNotInstalled() {
           instructions: message,
         };
       } else if (request.method === 'tools/list') {
-        reply.result = { tools: [{ name: 'status', description: 'Why GUI Test Studio for Claude cannot work yet, and what to do.', inputSchema: { type: 'object', properties: {}, additionalProperties: false } }] };
+        reply.result = { tools: [{ name: 'status', description: 'GUI Test Studio is not installed on this computer: this tool says where to download it.', inputSchema: { type: 'object', properties: {}, additionalProperties: false } }] };
       } else if (request.method === 'tools/call') {
         reply.result = { content: [{ type: 'text', text: message }], isError: true };
       } else if (request.method === 'ping') {

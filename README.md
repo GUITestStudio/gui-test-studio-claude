@@ -29,9 +29,11 @@ your computer. A local tool like this one does not run in claude.ai chat on the 
 
 ## What this plugin runs, and what is sent
 
-The plugin holds one small launcher (`server/index.js`, readable here): it finds `gts-mcp.exe`, GUI Test Studio's own
-program on your computer, and hands Claude's connection over to it, or says what to install when GUI Test Studio is
-missing. A skill tells Claude when to use it. Everything the tools do happens in that program:
+The plugin holds one small launcher (`server/index.js`, readable here): it finds `gts-mcp.exe`, the program GUI Test
+Studio's installer puts on your computer, and hands Claude's connection over to it. When GUI Test Studio is not
+installed, Claude is told to send you to [guiteststudio.com/download](https://www.guiteststudio.com/download) first, and
+nothing runs. The plugin contains none of GUI Test Studio itself: without it installed and an account on its free trial
+or a paid plan, the plugin does nothing. A skill tells Claude when to use it. Everything the tools do happens in that program:
 
 - **On your computer**: it moves the mouse, types and reads your screen (the windows' accessibility information, the
   page of a browser it opened, the screen's picture) to perform and check the test's steps, and writes the test files
