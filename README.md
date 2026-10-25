@@ -18,9 +18,9 @@ from a terminal or a CI/CD pipeline, and open in GUI Test Studio to edit it visu
 ## Requirements
 
 - **Windows 10 or 11.**
-- **GUI Test Studio installed**, from [guiteststudio.com/download](https://www.guiteststudio.com/download). Keep
-  "Add gtr-cli to the PATH" ticked in the installer: this plugin starts the program `gts-mcp` that GUI Test Studio
-  installs there.
+- **GUI Test Studio installed**, from [guiteststudio.com/download](https://www.guiteststudio.com/download). The
+  plugin finds its program `gts-mcp.exe` where the installer put it; nothing else to set up.
+- **Node.js 18 or later** on the PATH ([nodejs.org](https://nodejs.org)), which starts the plugin's small launcher.
 - **A GUI Test Studio account** on its free trial or a paid plan, signed in on this computer. Without one, every tool
   answers with how to sign in, and nothing else runs.
 
@@ -29,8 +29,9 @@ your computer. A local tool like this one does not run in claude.ai chat on the 
 
 ## What this plugin runs, and what is sent
 
-The plugin itself holds no code: it tells Claude to start `gts-mcp`, GUI Test Studio's own program on your computer,
-and adds a skill that tells Claude when to use it. Everything the tools do happens in that program:
+The plugin holds one small launcher (`server/index.js`, readable here): it finds `gts-mcp.exe`, GUI Test Studio's own
+program on your computer, and hands Claude's connection over to it, or says what to install when GUI Test Studio is
+missing. A skill tells Claude when to use it. Everything the tools do happens in that program:
 
 - **On your computer**: it moves the mouse, types and reads your screen (the windows' accessibility information, the
   page of a browser it opened, the screen's picture) to perform and check the test's steps, and writes the test files
