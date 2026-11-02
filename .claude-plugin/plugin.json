@@ -1,7 +1,7 @@
 {
   "name": "gui-test-studio",
   "displayName": "GUI Test Studio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Create, change and run automated end-to-end tests of Windows apps and web pages from a prompt, with GUI Test Studio's visual and AI engine.",
   "author": {
     "name": "GUI Test Studio",

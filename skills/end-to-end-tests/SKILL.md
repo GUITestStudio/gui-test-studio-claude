@@ -23,9 +23,18 @@ WinAppDriver or anything else) and never ask for access to a folder. The tools s
 
 ## Run, review and change a test
 
-- `run_test` runs a saved test and answers its verdict; `describe_test` lists its numbered steps.
-- `edit_test` changes a saved test in place. It shows the changes first: list them to the person and apply them
-  with `confirm: true` only after they agree. Never record a test again unless the person asks.
+- `run_test` runs saved tests and answers each verdict, with `start_at`, `retries` and `screen`; `describe_test` lists
+  a test's numbered steps.
+- `get_run_results` says why a run failed, with the pictures and what the AI said; `list_runs` says since when a test
+  fails and whether it is flaky. Neither runs anything.
+- `edit_test` changes a saved test in place: names, timeouts, expected text, where a check looks, strictness, Waits,
+  Test Flow steps, Markers, Scenarios, baseline profiles. `add_check` adds a check, proved on the test's own recording
+  (`view_recording` shows it). Both show the changes first: list them to the person and apply them with
+  `confirm: true` only after they agree. Never record a test again unless the person asks.
+- A defect of the app: `create_bug_report` (a PDF, a workbook, or a Jira issue once the person agrees). The app changed
+  on purpose: `accept_result`, only after the person agrees: from then on the difference counts as correct.
+- `export_runner_test` makes a `.GTR` for a CI machine or a tester; `get_ci_setup` gives the command and the pipeline
+  piece. `set_browsers_and_devices` with `test` and `generate_browsers_and_devices` cover a saved web test.
 - `open_in_studio` opens the test in GUI Test Studio to edit it visually; `open_in_runner` opens it in GUI Test
   Runner-Recorder, to run it there or show its report.
 - `import_figma_design` makes a test from a Figma design package exported with GUI Test Studio's Figma plugin.

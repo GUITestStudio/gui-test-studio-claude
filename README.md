@@ -10,8 +10,12 @@ from a terminal or a CI/CD pipeline, and open in GUI Test Studio to edit it visu
 - **Create a test from a prompt**: Claude clicks, types, scrolls and drags, then checks texts, values, pictures,
   counts and layouts. A check that could not pass on the screen right now is refused with the reason.
 - **Run it** and get a verdict, or open it in GUI Test Runner-Recorder for the full Confidence Report.
-- **Change it in place** ("raise the wait to 5 seconds", "rename step 3"): Claude lists the changes and asks before
-  anything is written.
+- **See why a run failed**: what each check expected and what the run found, with the pictures, what the AI said, and
+  since when the test fails.
+- **Change it in place** ("raise the wait to 5 seconds", "also check the total after step 5", "accept the new button"):
+  Claude lists the changes and asks before anything is written.
+- **Report and ship it**: a bug report as a PDF, a workbook or a Jira issue (only once you agree), a runner test for a CI
+  machine, and the command and pipeline piece for GitLab, Azure DevOps, Jenkins, TeamCity or GitHub Actions.
 - **Web apps on every browser and device**: Chrome, Edge and Firefox, phones, tablets and desktop sizes.
 - **From a Figma design**: a test made from a design exported with GUI Test Studio's Figma plugin.
 
