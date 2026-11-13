@@ -74,7 +74,7 @@ This plugin is proprietary software of GUI Test Studio SARL, not open source: yo
 GUI Test Studio, as its [LICENSE](LICENSE) says.
 GUI Test Studio itself is proprietary software of GUI Test Studio SARL, used under its own licence agreement
 ([terms](https://www.guiteststudio.com/terms)). "GUI Test Studio", "GUI Test Runner-Recorder", the GTS logo and the
-GTS Vision + AI Engine are trademarks of GUI Test Studio SARL. Claude is a trademark of Anthropic; this plugin is
+GTS Engine + AI are trademarks of GUI Test Studio SARL. Claude is a trademark of Anthropic; this plugin is
 published by GUI Test Studio and is not made or endorsed by Anthropic.
 
 © 2026 GUI Test Studio SARL. All rights reserved.
